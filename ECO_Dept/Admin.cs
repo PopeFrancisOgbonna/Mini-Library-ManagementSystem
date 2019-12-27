@@ -16,12 +16,23 @@ namespace ECO_Dept
         {
             InitializeComponent();
         }
-
+        int count; //for switching the edit user role modules
         private void lblEdit_Click(object sender, EventArgs e)
         {
-            dataGridView1.Visible = true;
-            btnDelete.Visible = true;
-            btnUpdate.Visible = true;
+           
+            if (count == 1)
+            {
+                dataGridView1.Visible = false;
+                btnDelete.Visible = false;
+                btnUpdate.Visible = false;
+                count -= 1;
+            }
+            else{
+                dataGridView1.Visible = true;
+                btnDelete.Visible = true;
+                btnUpdate.Visible = true;
+                count += 1;
+            }
         }
 
         private void txtService_TextChanged(object sender, EventArgs e)
