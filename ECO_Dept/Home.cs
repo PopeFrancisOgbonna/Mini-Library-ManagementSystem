@@ -72,7 +72,8 @@ namespace ECO_Dept
 
         private void toolAdmin_Click(object sender, EventArgs e)
         {
-
+            Admin admin = new Admin();
+            admin.ShowDialog();
         }
     }
 }
