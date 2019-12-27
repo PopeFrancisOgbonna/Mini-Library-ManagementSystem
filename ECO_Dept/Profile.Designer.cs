@@ -31,12 +31,12 @@
             this.lblUserName = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtUser = new System.Windows.Forms.TextBox();
-            this.txtOldPass = new System.Windows.Forms.TextBox();
             this.txtNewPass = new System.Windows.Forms.TextBox();
+            this.txtOldPass = new System.Windows.Forms.TextBox();
+            this.txtUser = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnPass = new System.Windows.Forms.Button();
@@ -80,23 +80,29 @@
             this.groupBox1.Text = "Profile Details";
             this.groupBox1.Visible = false;
             // 
-            // label1
+            // txtNewPass
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 37);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 21);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Username";
+            this.txtNewPass.Enabled = false;
+            this.txtNewPass.Location = new System.Drawing.Point(135, 103);
+            this.txtNewPass.Name = "txtNewPass";
+            this.txtNewPass.Size = new System.Drawing.Size(250, 28);
+            this.txtNewPass.TabIndex = 5;
             // 
-            // label2
+            // txtOldPass
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 69);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(126, 21);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Old Password";
+            this.txtOldPass.Enabled = false;
+            this.txtOldPass.Location = new System.Drawing.Point(135, 66);
+            this.txtOldPass.Name = "txtOldPass";
+            this.txtOldPass.Size = new System.Drawing.Size(250, 28);
+            this.txtOldPass.TabIndex = 4;
+            // 
+            // txtUser
+            // 
+            this.txtUser.Enabled = false;
+            this.txtUser.Location = new System.Drawing.Point(135, 29);
+            this.txtUser.Name = "txtUser";
+            this.txtUser.Size = new System.Drawing.Size(250, 28);
+            this.txtUser.TabIndex = 3;
             // 
             // label3
             // 
@@ -107,29 +113,23 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "New Password";
             // 
-            // txtUser
+            // label2
             // 
-            this.txtUser.Enabled = false;
-            this.txtUser.Location = new System.Drawing.Point(135, 29);
-            this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(250, 28);
-            this.txtUser.TabIndex = 3;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 69);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(126, 21);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Old Password";
             // 
-            // txtOldPass
+            // label1
             // 
-            this.txtOldPass.Enabled = false;
-            this.txtOldPass.Location = new System.Drawing.Point(135, 66);
-            this.txtOldPass.Name = "txtOldPass";
-            this.txtOldPass.Size = new System.Drawing.Size(250, 28);
-            this.txtOldPass.TabIndex = 4;
-            // 
-            // txtNewPass
-            // 
-            this.txtNewPass.Enabled = false;
-            this.txtNewPass.Location = new System.Drawing.Point(135, 103);
-            this.txtNewPass.Name = "txtNewPass";
-            this.txtNewPass.Size = new System.Drawing.Size(250, 28);
-            this.txtNewPass.TabIndex = 5;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 37);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(94, 21);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Username";
             // 
             // btnSave
             // 
@@ -186,6 +186,7 @@
             this.MaximumSize = new System.Drawing.Size(675, 245);
             this.MinimumSize = new System.Drawing.Size(675, 245);
             this.Name = "Profile";
+            this.Opacity = 0.85D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Profile";
             this.Load += new System.EventHandler(this.Profile_Load);
