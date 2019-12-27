@@ -60,6 +60,8 @@ namespace ECO_Dept
         {
             lblTab.Height = btnIn.Height;
             lblTab.Top = btnIn.Top;
+            SignIn manualIn = new SignIn();
+            manualIn.ShowDialog();
         }
 
         private void toolSearch_Click(object sender, EventArgs e)
