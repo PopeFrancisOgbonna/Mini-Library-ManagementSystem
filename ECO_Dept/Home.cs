@@ -52,6 +52,8 @@ namespace ECO_Dept
         {
             lblTab.Height = btnOut.Height;
             lblTab.Top = btnOut.Top;
+            SignOut manualOut = new SignOut();
+            manualOut.ShowDialog();
         }
 
         private void btnIn_Click(object sender, EventArgs e)
