@@ -33,6 +33,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.homePane = new System.Windows.Forms.Panel();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.btnLogin = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.loginPane = new System.Windows.Forms.Panel();
@@ -57,10 +58,10 @@
             this.lbltime = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.btnCancel = new System.Windows.Forms.Button();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.homePane.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.loginPane.SuspendLayout();
             this.loginGrp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -69,7 +70,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -98,10 +98,20 @@
             this.homePane.Controls.Add(this.pictureBox8);
             this.homePane.Controls.Add(this.btnLogin);
             this.homePane.Controls.Add(this.label7);
-            this.homePane.Location = new System.Drawing.Point(437, 184);
+            this.homePane.Location = new System.Drawing.Point(438, 179);
             this.homePane.Name = "homePane";
             this.homePane.Size = new System.Drawing.Size(790, 439);
             this.homePane.TabIndex = 0;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.Location = new System.Drawing.Point(314, 110);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(467, 322);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 2;
+            this.pictureBox8.TabStop = false;
             // 
             // btnLogin
             // 
@@ -216,6 +226,7 @@
             this.txtUserpass.Location = new System.Drawing.Point(134, 132);
             this.txtUserpass.Multiline = true;
             this.txtUserpass.Name = "txtUserpass";
+            this.txtUserpass.PasswordChar = '*';
             this.txtUserpass.Size = new System.Drawing.Size(419, 48);
             this.txtUserpass.TabIndex = 4;
             this.txtUserpass.TextChanged += new System.EventHandler(this.txtUserpass_TextChanged);
@@ -375,16 +386,6 @@
             this.btnCancel.Visible = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(314, 110);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(467, 322);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 2;
-            this.pictureBox8.TabStop = false;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -411,6 +412,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.homePane.ResumeLayout(false);
             this.homePane.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.loginPane.ResumeLayout(false);
             this.loginGrp.ResumeLayout(false);
             this.loginGrp.PerformLayout();
@@ -420,7 +422,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

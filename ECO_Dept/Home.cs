@@ -16,11 +16,10 @@ namespace ECO_Dept
         {
             InitializeComponent();
             timer1.Start();
-            lblUser.Text = "Pope Francis Ogbonna";
             lblTab.Height = btnDash.Height;
             lblTab.Top = btnDash.Top;
         }
-
+        public  string userPass;
         private void timer1_Tick(object sender, EventArgs e)
         {
             lblDate.Text = DateTime.Now.ToLongDateString();
@@ -33,6 +32,8 @@ namespace ECO_Dept
             lblTab.Top = btnProfile.Top;
 
             Profile pro = new Profile();
+            pro.oldpass = userPass;
+            pro.lblUserName.Text ="Username: "+ lblUser.Text;
             pro.ShowDialog();
         }
 

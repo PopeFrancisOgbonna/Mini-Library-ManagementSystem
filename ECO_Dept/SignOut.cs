@@ -40,6 +40,21 @@ namespace ECO_Dept
             txtQuantity.Clear();
             txtRank.Clear();
             txtService.Clear();
+            txtID.Clear();
+            txtID.Visible = false;
+            lbliD.Visible = false;
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (txtItem.Text == "" || txtName.Text == "" || txtQuantity.Text == "" || txtRank.Text == "" || txtService.Text == "")
+            {
+                MessageBox.Show("Please fill out all Fields", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                MessageBox.Show("Saved");
+            }
         }
     }
 }

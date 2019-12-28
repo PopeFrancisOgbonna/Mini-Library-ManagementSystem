@@ -44,5 +44,26 @@ namespace ECO_Dept
         {
             if(txtRole.Text != "") { btnSave.Visible = true; }
         }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtName.Clear();
+            txtPost.Clear();
+            txtRank.Clear();
+            txtRole.Clear();
+            txtService.Clear();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (txtName.Text == "" || txtPost.Text == "" || txtRank.Text == "" || txtRole.Text == "" || txtService.Text == "")
+            {
+                MessageBox.Show("Please fill out all Fields", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                MessageBox.Show("confirmed!");
+            }
+        }
     }
 }

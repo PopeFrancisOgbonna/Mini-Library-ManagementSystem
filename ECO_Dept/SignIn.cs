@@ -19,10 +19,7 @@ namespace ECO_Dept
 
         private void txtService_TextChanged(object sender, EventArgs e)
         {
-            if (txtServiceIn.Text != "")
-            {
-                btnClearIn.Visible = true;
-            }
+           
         }
 
         private void txtRemark_TextChanged(object sender, EventArgs e)
@@ -42,6 +39,29 @@ namespace ECO_Dept
             txtRemark.Clear();
             txtReturned.Clear();
             txtServiceIn.Clear();
+            txtID.Clear();
+            txtID.Visible = false;
+            lblID.Visible = false;
+        }
+
+        private void btnSaveIn_Click(object sender, EventArgs e)
+        {
+            if (txtRemain.Text == "" || txtRemark.Text == "" || txtReturned.Text == "")
+            {
+                MessageBox.Show("Please fill all Fields", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                MessageBox.Show("Received");
+            }
+        }
+
+        private void txtReturned_TextChanged(object sender, EventArgs e)
+        {
+            if (txtReturned.Text != "")
+            {
+                btnClearIn.Visible = true;
+            }
         }
     }
 }

@@ -21,7 +21,8 @@ namespace ECO_Dept
         {
             label2.Visible = true;
             txtName.Visible = true;
-            btnSearch.Visible = false; 
+            btnSearch.Visible = false;
+            txtName.Clear();
         }
 
         private void btnAll_Click(object sender, EventArgs e)

@@ -89,6 +89,7 @@
             this.btnClear.Text = "Clear Fields";
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Visible = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // dataGridView1
             // 
@@ -114,6 +115,7 @@
             this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Visible = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // groupBox1
             // 

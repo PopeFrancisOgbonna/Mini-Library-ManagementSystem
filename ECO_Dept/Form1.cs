@@ -17,7 +17,7 @@ namespace ECO_Dept
             InitializeComponent();
             timer1.Start();
         }
-
+        public static string user;
         private void lblPassword_Click(object sender, EventArgs e)
         {
 
@@ -25,7 +25,7 @@ namespace ECO_Dept
 
         private void txtUsername_TextChanged(object sender, EventArgs e)
         {
-
+            user = txtUsername.Text;
         }
 
         private void txtUserpass_TextChanged(object sender, EventArgs e)
@@ -35,13 +35,26 @@ namespace ECO_Dept
 
         private void txtUserpost_TextChanged(object sender, EventArgs e)
         {
-
+            if (txtUserpost.Text != "")
+            {
+                btnSignin.Visible = true;
+            }
         }
 
         private void btnSignin_Click(object sender, EventArgs e)
-        {
-            Home home = new Home();
-            home.ShowDialog();
+        {   // Checks user expected inputs are not left out
+            if (txtUsername.Text == "" || txtUserpost.Text == "" || txtUserpass.Text == "")
+            {
+                MessageBox.Show("Please fill out all Fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                Home home = new Home();
+                home.lblUser.Text = user;
+                home.userPass = txtUserpass.Text;
+                home.ShowDialog();
+                txtUserpass.Clear();
+            }
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -53,7 +66,7 @@ namespace ECO_Dept
         private void btnLogin_Click(object sender, EventArgs e)
         {
             loginPane.Visible = true;
-            btnSignin.Visible = true;
+            btnSignin.Visible = false;
             btnCancel.Visible = true;
             homePane.Visible = false;
         }

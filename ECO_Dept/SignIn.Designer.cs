@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SignIn));
-            this.btnDeleteIn = new System.Windows.Forms.Button();
             this.btnUpdateIn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
@@ -42,7 +41,7 @@
             this.txtReturned = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblID = new System.Windows.Forms.Label();
             this.btnSaveIn = new System.Windows.Forms.Button();
             this.btnClearIn = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -59,22 +58,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnDeleteIn
-            // 
-            this.btnDeleteIn.BackColor = System.Drawing.Color.Brown;
-            this.btnDeleteIn.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteIn.ForeColor = System.Drawing.Color.White;
-            this.btnDeleteIn.Image = ((System.Drawing.Image)(resources.GetObject("btnDeleteIn.Image")));
-            this.btnDeleteIn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDeleteIn.Location = new System.Drawing.Point(747, 451);
-            this.btnDeleteIn.Name = "btnDeleteIn";
-            this.btnDeleteIn.Size = new System.Drawing.Size(110, 44);
-            this.btnDeleteIn.TabIndex = 6;
-            this.btnDeleteIn.Text = "Delete";
-            this.btnDeleteIn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnDeleteIn.UseVisualStyleBackColor = false;
-            this.btnDeleteIn.Visible = false;
             // 
             // btnUpdateIn
             // 
@@ -132,7 +115,7 @@
             this.groupBox1.Controls.Add(this.txtReturned);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.txtID);
-            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.lblID);
             this.groupBox1.Controls.Add(this.btnSaveIn);
             this.groupBox1.Controls.Add(this.btnClearIn);
             this.groupBox1.Controls.Add(this.dateTimePicker1);
@@ -197,6 +180,7 @@
             this.txtReturned.Name = "txtReturned";
             this.txtReturned.Size = new System.Drawing.Size(93, 30);
             this.txtReturned.TabIndex = 17;
+            this.txtReturned.TextChanged += new System.EventHandler(this.txtReturned_TextChanged);
             // 
             // label3
             // 
@@ -216,15 +200,15 @@
             this.txtID.TabIndex = 15;
             this.txtID.Visible = false;
             // 
-            // label7
+            // lblID
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(66, 140);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(34, 21);
-            this.label7.TabIndex = 14;
-            this.label7.Text = "ID";
-            this.label7.Visible = false;
+            this.lblID.AutoSize = true;
+            this.lblID.Location = new System.Drawing.Point(66, 140);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(34, 21);
+            this.lblID.TabIndex = 14;
+            this.lblID.Text = "ID";
+            this.lblID.Visible = false;
             // 
             // btnSaveIn
             // 
@@ -240,6 +224,7 @@
             this.btnSaveIn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSaveIn.UseVisualStyleBackColor = false;
             this.btnSaveIn.Visible = false;
+            this.btnSaveIn.Click += new System.EventHandler(this.btnSaveIn_Click);
             // 
             // btnClearIn
             // 
@@ -275,6 +260,7 @@
             // 
             // txtQuantityIn
             // 
+            this.txtQuantityIn.Enabled = false;
             this.txtQuantityIn.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtQuantityIn.Location = new System.Drawing.Point(178, 174);
             this.txtQuantityIn.Name = "txtQuantityIn";
@@ -283,6 +269,7 @@
             // 
             // txtItemIn
             // 
+            this.txtItemIn.Enabled = false;
             this.txtItemIn.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtItemIn.Location = new System.Drawing.Point(178, 96);
             this.txtItemIn.Multiline = true;
@@ -292,6 +279,7 @@
             // 
             // txtNameIn
             // 
+            this.txtNameIn.Enabled = false;
             this.txtNameIn.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNameIn.Location = new System.Drawing.Point(178, 62);
             this.txtNameIn.Name = "txtNameIn";
@@ -300,6 +288,7 @@
             // 
             // txtServiceIn
             // 
+            this.txtServiceIn.Enabled = false;
             this.txtServiceIn.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtServiceIn.Location = new System.Drawing.Point(178, 26);
             this.txtServiceIn.Name = "txtServiceIn";
@@ -348,7 +337,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1030, 507);
-            this.Controls.Add(this.btnDeleteIn);
             this.Controls.Add(this.btnUpdateIn);
             this.Controls.Add(this.panel1);
             this.MaximumSize = new System.Drawing.Size(1046, 546);
@@ -367,14 +355,12 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnDeleteIn;
         private System.Windows.Forms.Button btnUpdateIn;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtID;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.Button btnSaveIn;
         private System.Windows.Forms.Button btnClearIn;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;

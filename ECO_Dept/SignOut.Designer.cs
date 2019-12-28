@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SignOut));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.txtID = new System.Windows.Forms.TextBox();
+            this.lbliD = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -58,8 +58,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox6);
-            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.txtID);
+            this.groupBox1.Controls.Add(this.lbliD);
             this.groupBox1.Controls.Add(this.btnSave);
             this.groupBox1.Controls.Add(this.btnClear);
             this.groupBox1.Controls.Add(this.dateTimePicker1);
@@ -83,24 +83,24 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Personnel Detail";
             // 
-            // textBox6
+            // txtID
             // 
-            this.textBox6.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(114, 180);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(46, 30);
-            this.textBox6.TabIndex = 15;
-            this.textBox6.Visible = false;
+            this.txtID.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtID.Location = new System.Drawing.Point(114, 180);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(46, 30);
+            this.txtID.TabIndex = 15;
+            this.txtID.Visible = false;
             // 
-            // label7
+            // lbliD
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(77, 184);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(34, 21);
-            this.label7.TabIndex = 14;
-            this.label7.Text = "ID";
-            this.label7.Visible = false;
+            this.lbliD.AutoSize = true;
+            this.lbliD.Location = new System.Drawing.Point(77, 184);
+            this.lbliD.Name = "lbliD";
+            this.lbliD.Size = new System.Drawing.Size(34, 21);
+            this.lbliD.TabIndex = 14;
+            this.lbliD.Text = "ID";
+            this.lbliD.Visible = false;
             // 
             // btnSave
             // 
@@ -116,6 +116,7 @@
             this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Visible = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnClear
             // 
@@ -343,8 +344,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.Label lbliD;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Label label8;

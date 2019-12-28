@@ -419,7 +419,6 @@
         private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.Label lbltime;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Label lblUser;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Button btnSignOut;
         private System.Windows.Forms.Button btnProfile;
@@ -437,5 +436,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox5;
+        public System.Windows.Forms.Label lblUser;
     }
 }

@@ -46,9 +46,10 @@
             // lblUserName
             // 
             this.lblUserName.AutoSize = true;
-            this.lblUserName.Location = new System.Drawing.Point(12, 70);
+            this.lblUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserName.Location = new System.Drawing.Point(9, 70);
             this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Size = new System.Drawing.Size(35, 13);
+            this.lblUserName.Size = new System.Drawing.Size(52, 18);
             this.lblUserName.TabIndex = 0;
             this.lblUserName.Text = "label1";
             // 
@@ -198,8 +199,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblUserName;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtNewPass;
@@ -211,5 +210,6 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnPass;
+        public System.Windows.Forms.Label lblUserName;
     }
 }

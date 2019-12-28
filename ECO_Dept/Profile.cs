@@ -21,7 +21,7 @@ namespace ECO_Dept
         {
 
         }
-
+        public string oldpass;
         private void btnEdit_Click(object sender, EventArgs e)
         {
             btnSave.Visible = true;
@@ -39,10 +39,31 @@ namespace ECO_Dept
             txtNewPass.Enabled = true;
             txtOldPass.Enabled = true;
         }
-
+       
         private void btnSave_Click(object sender, EventArgs e)
         {
-
+            if (txtUser.Enabled)
+            {
+                if (txtUser.Text == "")
+                {
+                    MessageBox.Show("Please Enter a new user name");
+                }
+                else
+                { 
+                MessageBox.Show("user Name Changed");
+                }
+            }
+            else
+            {
+                if (txtOldPass.Text != oldpass || txtNewPass.Text == "")
+                {
+                    MessageBox.Show("Ensure your Old password is correct and Enter a New one", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show("Password Changd");
+                }
+            }
         }
     }
 }
