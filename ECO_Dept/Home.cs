@@ -66,7 +66,8 @@ namespace ECO_Dept
 
         private void toolSearch_Click(object sender, EventArgs e)
         {
-
+            Search search = new Search();
+            search.ShowDialog();
         }
 
         private void toolReport_Click(object sender, EventArgs e)
@@ -78,6 +79,21 @@ namespace ECO_Dept
         {
             Admin admin = new Admin();
             admin.ShowDialog();
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("This software is designed by Xpress SoftwareLab for the ECO wing to manage Traning Manual Library.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("For help contact the ECO Supervisor or Xpress SoftwareLab. Tel: +2347031620728  Email: xpressdreams.ng@gmail.com", "Help", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void btnSignOut_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

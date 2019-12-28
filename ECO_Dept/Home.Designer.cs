@@ -202,6 +202,7 @@
             this.toolStripButton2.Name = "toolStripButton2";
             this.toolStripButton2.Size = new System.Drawing.Size(72, 25);
             this.toolStripButton2.Text = "About";
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
             // toolStripButton3
             // 
@@ -210,6 +211,7 @@
             this.toolStripButton3.Name = "toolStripButton3";
             this.toolStripButton3.Size = new System.Drawing.Size(62, 25);
             this.toolStripButton3.Text = "Help";
+            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
             // sideBarPane
             // 
@@ -323,6 +325,7 @@
             this.btnSignOut.Text = "Sign Out";
             this.btnSignOut.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSignOut.UseVisualStyleBackColor = false;
+            this.btnSignOut.Click += new System.EventHandler(this.btnSignOut_Click);
             // 
             // lblUser
             // 
