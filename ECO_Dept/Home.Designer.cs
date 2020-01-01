@@ -42,6 +42,7 @@
             this.toolSearch = new System.Windows.Forms.ToolStripButton();
             this.toolReport = new System.Windows.Forms.ToolStripButton();
             this.toolAdmin = new System.Windows.Forms.ToolStripButton();
+            this.toolDatabaseBackup = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.sideBarPane = new System.Windows.Forms.Panel();
@@ -57,6 +58,7 @@
             this.lblDate = new System.Windows.Forms.Label();
             this.lbltime = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.toolRestore = new System.Windows.Forms.ToolStripButton();
             this.logoPane.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -145,9 +147,9 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(38, 73);
+            this.pictureBox5.Location = new System.Drawing.Point(15, 73);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(654, 418);
+            this.pictureBox5.Size = new System.Drawing.Size(677, 418);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 1;
             this.pictureBox5.TabStop = false;
@@ -160,11 +162,13 @@
             this.toolSearch,
             this.toolReport,
             this.toolAdmin,
+            this.toolDatabaseBackup,
+            this.toolRestore,
             this.toolStripButton2,
             this.toolStripButton3});
-            this.toolStrip1.Location = new System.Drawing.Point(96, 9);
+            this.toolStrip1.Location = new System.Drawing.Point(25, 14);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(443, 28);
+            this.toolStrip1.Size = new System.Drawing.Size(706, 31);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -173,7 +177,7 @@
             this.toolSearch.Image = ((System.Drawing.Image)(resources.GetObject("toolSearch.Image")));
             this.toolSearch.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolSearch.Name = "toolSearch";
-            this.toolSearch.Size = new System.Drawing.Size(77, 25);
+            this.toolSearch.Size = new System.Drawing.Size(77, 28);
             this.toolSearch.Text = "Search";
             this.toolSearch.Click += new System.EventHandler(this.toolSearch_Click);
             // 
@@ -182,7 +186,7 @@
             this.toolReport.Image = ((System.Drawing.Image)(resources.GetObject("toolReport.Image")));
             this.toolReport.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolReport.Name = "toolReport";
-            this.toolReport.Size = new System.Drawing.Size(144, 25);
+            this.toolReport.Size = new System.Drawing.Size(144, 28);
             this.toolReport.Text = "Generate Report";
             this.toolReport.Click += new System.EventHandler(this.toolReport_Click);
             // 
@@ -191,16 +195,26 @@
             this.toolAdmin.Image = ((System.Drawing.Image)(resources.GetObject("toolAdmin.Image")));
             this.toolAdmin.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolAdmin.Name = "toolAdmin";
-            this.toolAdmin.Size = new System.Drawing.Size(76, 25);
+            this.toolAdmin.Size = new System.Drawing.Size(76, 28);
             this.toolAdmin.Text = "Admin";
             this.toolAdmin.Click += new System.EventHandler(this.toolAdmin_Click);
+            // 
+            // toolDatabaseBackup
+            // 
+            this.toolDatabaseBackup.Image = ((System.Drawing.Image)(resources.GetObject("toolDatabaseBackup.Image")));
+            this.toolDatabaseBackup.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolDatabaseBackup.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolDatabaseBackup.Name = "toolDatabaseBackup";
+            this.toolDatabaseBackup.Size = new System.Drawing.Size(156, 28);
+            this.toolDatabaseBackup.Text = "Database Backup";
+            this.toolDatabaseBackup.Click += new System.EventHandler(this.toolDatabaseBackup_Click);
             // 
             // toolStripButton2
             // 
             this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(72, 25);
+            this.toolStripButton2.Size = new System.Drawing.Size(72, 28);
             this.toolStripButton2.Text = "About";
             this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
@@ -209,7 +223,7 @@
             this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
             this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(62, 25);
+            this.toolStripButton3.Size = new System.Drawing.Size(62, 28);
             this.toolStripButton3.Text = "Help";
             this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
@@ -374,6 +388,15 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // toolRestore
+            // 
+            this.toolRestore.Image = ((System.Drawing.Image)(resources.GetObject("toolRestore.Image")));
+            this.toolRestore.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolRestore.Name = "toolRestore";
+            this.toolRestore.Size = new System.Drawing.Size(107, 28);
+            this.toolRestore.Text = "Restore DB";
+            this.toolRestore.Click += new System.EventHandler(this.toolRestore_Click);
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -437,5 +460,7 @@
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox5;
         public System.Windows.Forms.Label lblUser;
+        private System.Windows.Forms.ToolStripButton toolDatabaseBackup;
+        private System.Windows.Forms.ToolStripButton toolRestore;
     }
 }

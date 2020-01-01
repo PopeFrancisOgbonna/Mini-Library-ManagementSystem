@@ -38,6 +38,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.loginPane = new System.Windows.Forms.Panel();
             this.loginGrp = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtServiceNo = new System.Windows.Forms.TextBox();
             this.lblPassword = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -98,7 +100,7 @@
             this.homePane.Controls.Add(this.pictureBox8);
             this.homePane.Controls.Add(this.btnLogin);
             this.homePane.Controls.Add(this.label7);
-            this.homePane.Location = new System.Drawing.Point(438, 179);
+            this.homePane.Location = new System.Drawing.Point(441, 179);
             this.homePane.Name = "homePane";
             this.homePane.Size = new System.Drawing.Size(790, 439);
             this.homePane.TabIndex = 0;
@@ -147,12 +149,14 @@
             this.loginPane.Controls.Add(this.loginGrp);
             this.loginPane.Location = new System.Drawing.Point(538, 197);
             this.loginPane.Name = "loginPane";
-            this.loginPane.Size = new System.Drawing.Size(605, 333);
+            this.loginPane.Size = new System.Drawing.Size(634, 333);
             this.loginPane.TabIndex = 1;
             this.loginPane.Visible = false;
             // 
             // loginGrp
             // 
+            this.loginGrp.Controls.Add(this.label4);
+            this.loginGrp.Controls.Add(this.txtServiceNo);
             this.loginGrp.Controls.Add(this.lblPassword);
             this.loginGrp.Controls.Add(this.label3);
             this.loginGrp.Controls.Add(this.label2);
@@ -167,10 +171,28 @@
             this.loginGrp.ForeColor = System.Drawing.Color.White;
             this.loginGrp.Location = new System.Drawing.Point(15, 18);
             this.loginGrp.Name = "loginGrp";
-            this.loginGrp.Size = new System.Drawing.Size(572, 298);
+            this.loginGrp.Size = new System.Drawing.Size(596, 298);
             this.loginGrp.TabIndex = 0;
             this.loginGrp.TabStop = false;
             this.loginGrp.Text = "Login Details";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(401, 33);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(107, 21);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Service No.";
+            // 
+            // txtServiceNo
+            // 
+            this.txtServiceNo.Font = new System.Drawing.Font("Modern No. 20", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtServiceNo.Location = new System.Drawing.Point(405, 57);
+            this.txtServiceNo.Multiline = true;
+            this.txtServiceNo.Name = "txtServiceNo";
+            this.txtServiceNo.Size = new System.Drawing.Size(172, 48);
+            this.txtServiceNo.TabIndex = 10;
             // 
             // lblPassword
             // 
@@ -216,7 +238,7 @@
             this.txtUserpost.Location = new System.Drawing.Point(134, 207);
             this.txtUserpost.Multiline = true;
             this.txtUserpost.Name = "txtUserpost";
-            this.txtUserpost.Size = new System.Drawing.Size(419, 48);
+            this.txtUserpost.Size = new System.Drawing.Size(443, 48);
             this.txtUserpost.TabIndex = 5;
             this.txtUserpost.TextChanged += new System.EventHandler(this.txtUserpost_TextChanged);
             // 
@@ -227,7 +249,7 @@
             this.txtUserpass.Multiline = true;
             this.txtUserpass.Name = "txtUserpass";
             this.txtUserpass.PasswordChar = '*';
-            this.txtUserpass.Size = new System.Drawing.Size(419, 48);
+            this.txtUserpass.Size = new System.Drawing.Size(443, 48);
             this.txtUserpass.TabIndex = 4;
             this.txtUserpass.TextChanged += new System.EventHandler(this.txtUserpass_TextChanged);
             // 
@@ -237,7 +259,7 @@
             this.txtUsername.Location = new System.Drawing.Point(134, 57);
             this.txtUsername.Multiline = true;
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(419, 48);
+            this.txtUsername.Size = new System.Drawing.Size(265, 48);
             this.txtUsername.TabIndex = 3;
             this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
             // 
@@ -320,9 +342,9 @@
             this.label6.ForeColor = System.Drawing.Color.Blue;
             this.label6.Location = new System.Drawing.Point(37, 541);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(324, 34);
+            this.label6.Size = new System.Drawing.Size(333, 34);
             this.label6.TabIndex = 1;
-            this.label6.Text = "Air Vice Marshal P.O Ohimare";
+            this.label6.Text = "Air Vice Marshal P.O Oahimire";
             // 
             // btnSignin
             // 
@@ -457,6 +479,8 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtServiceNo;
     }
 }
 

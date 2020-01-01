@@ -29,17 +29,19 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Search));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnBorrowed = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnReturned = new System.Windows.Forms.Button();
-            this.btnAll = new System.Windows.Forms.Button();
-            this.btnPending = new System.Windows.Forms.Button();
-            this.btnPersonnel = new System.Windows.Forms.Button();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.btnPersonnel = new System.Windows.Forms.Button();
+            this.btnPending = new System.Windows.Forms.Button();
+            this.btnAll = new System.Windows.Forms.Button();
+            this.btnReturned = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnBorrowed = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -62,112 +64,6 @@
             this.panel2.Size = new System.Drawing.Size(962, 402);
             this.panel2.TabIndex = 1;
             // 
-            // btnBorrowed
-            // 
-            this.btnBorrowed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBorrowed.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBorrowed.ForeColor = System.Drawing.Color.White;
-            this.btnBorrowed.Location = new System.Drawing.Point(9, 92);
-            this.btnBorrowed.Name = "btnBorrowed";
-            this.btnBorrowed.Size = new System.Drawing.Size(184, 40);
-            this.btnBorrowed.TabIndex = 0;
-            this.btnBorrowed.Text = "Borrowed Manuals";
-            this.btnBorrowed.UseVisualStyleBackColor = true;
-            this.btnBorrowed.Click += new System.EventHandler(this.btnBorrowed_Click);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(202, 14);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(745, 371);
-            this.dataGridView1.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label1.Location = new System.Drawing.Point(20, 11);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(154, 24);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Choose Criteria";
-            // 
-            // btnReturned
-            // 
-            this.btnReturned.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReturned.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReturned.ForeColor = System.Drawing.Color.White;
-            this.btnReturned.Location = new System.Drawing.Point(9, 138);
-            this.btnReturned.Name = "btnReturned";
-            this.btnReturned.Size = new System.Drawing.Size(184, 40);
-            this.btnReturned.TabIndex = 3;
-            this.btnReturned.Text = "Returned Manuals";
-            this.btnReturned.UseVisualStyleBackColor = true;
-            this.btnReturned.Click += new System.EventHandler(this.btnReturned_Click);
-            // 
-            // btnAll
-            // 
-            this.btnAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAll.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAll.ForeColor = System.Drawing.Color.White;
-            this.btnAll.Location = new System.Drawing.Point(9, 46);
-            this.btnAll.Name = "btnAll";
-            this.btnAll.Size = new System.Drawing.Size(184, 40);
-            this.btnAll.TabIndex = 4;
-            this.btnAll.Text = "All Records";
-            this.btnAll.UseVisualStyleBackColor = true;
-            this.btnAll.Click += new System.EventHandler(this.btnAll_Click);
-            // 
-            // btnPending
-            // 
-            this.btnPending.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPending.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPending.ForeColor = System.Drawing.Color.White;
-            this.btnPending.Location = new System.Drawing.Point(9, 184);
-            this.btnPending.Name = "btnPending";
-            this.btnPending.Size = new System.Drawing.Size(184, 40);
-            this.btnPending.TabIndex = 5;
-            this.btnPending.Text = "Pending Manuals";
-            this.btnPending.UseVisualStyleBackColor = true;
-            this.btnPending.Click += new System.EventHandler(this.btnPending_Click);
-            // 
-            // btnPersonnel
-            // 
-            this.btnPersonnel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPersonnel.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPersonnel.ForeColor = System.Drawing.Color.White;
-            this.btnPersonnel.Location = new System.Drawing.Point(9, 230);
-            this.btnPersonnel.Name = "btnPersonnel";
-            this.btnPersonnel.Size = new System.Drawing.Size(184, 40);
-            this.btnPersonnel.TabIndex = 6;
-            this.btnPersonnel.Text = "Personnel";
-            this.btnPersonnel.UseVisualStyleBackColor = true;
-            this.btnPersonnel.Click += new System.EventHandler(this.btnPersonnel_Click);
-            // 
-            // txtName
-            // 
-            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(9, 301);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(184, 29);
-            this.txtName.TabIndex = 7;
-            this.txtName.Visible = false;
-            this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Maroon;
-            this.label2.Location = new System.Drawing.Point(29, 280);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(149, 20);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Enter Service No.";
-            this.label2.Visible = false;
-            // 
             // btnSearch
             // 
             this.btnSearch.BackColor = System.Drawing.Color.SeaGreen;
@@ -183,6 +79,129 @@
             this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Visible = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Maroon;
+            this.label2.Location = new System.Drawing.Point(29, 280);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(149, 20);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Enter Service No.";
+            this.label2.Visible = false;
+            // 
+            // txtName
+            // 
+            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.Location = new System.Drawing.Point(9, 301);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(184, 29);
+            this.txtName.TabIndex = 7;
+            this.txtName.Visible = false;
+            this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
+            // 
+            // btnPersonnel
+            // 
+            this.btnPersonnel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPersonnel.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPersonnel.ForeColor = System.Drawing.Color.White;
+            this.btnPersonnel.Location = new System.Drawing.Point(9, 230);
+            this.btnPersonnel.Name = "btnPersonnel";
+            this.btnPersonnel.Size = new System.Drawing.Size(184, 40);
+            this.btnPersonnel.TabIndex = 6;
+            this.btnPersonnel.Text = "Personnel";
+            this.btnPersonnel.UseVisualStyleBackColor = true;
+            this.btnPersonnel.Click += new System.EventHandler(this.btnPersonnel_Click);
+            // 
+            // btnPending
+            // 
+            this.btnPending.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPending.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPending.ForeColor = System.Drawing.Color.White;
+            this.btnPending.Location = new System.Drawing.Point(9, 184);
+            this.btnPending.Name = "btnPending";
+            this.btnPending.Size = new System.Drawing.Size(184, 40);
+            this.btnPending.TabIndex = 5;
+            this.btnPending.Text = "Pending Manuals";
+            this.btnPending.UseVisualStyleBackColor = true;
+            this.btnPending.Click += new System.EventHandler(this.btnPending_Click);
+            // 
+            // btnAll
+            // 
+            this.btnAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAll.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAll.ForeColor = System.Drawing.Color.White;
+            this.btnAll.Location = new System.Drawing.Point(9, 46);
+            this.btnAll.Name = "btnAll";
+            this.btnAll.Size = new System.Drawing.Size(184, 40);
+            this.btnAll.TabIndex = 4;
+            this.btnAll.Text = "All Records";
+            this.btnAll.UseVisualStyleBackColor = true;
+            this.btnAll.Click += new System.EventHandler(this.btnAll_Click);
+            // 
+            // btnReturned
+            // 
+            this.btnReturned.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReturned.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReturned.ForeColor = System.Drawing.Color.White;
+            this.btnReturned.Location = new System.Drawing.Point(9, 138);
+            this.btnReturned.Name = "btnReturned";
+            this.btnReturned.Size = new System.Drawing.Size(184, 40);
+            this.btnReturned.TabIndex = 3;
+            this.btnReturned.Text = "Returned Manuals";
+            this.btnReturned.UseVisualStyleBackColor = true;
+            this.btnReturned.Click += new System.EventHandler(this.btnReturned_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label1.Location = new System.Drawing.Point(20, 11);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(154, 24);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Choose Criteria";
+            // 
+            // dataGridView1
+            // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView1.Location = new System.Drawing.Point(202, 14);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(745, 371);
+            this.dataGridView1.TabIndex = 1;
+            // 
+            // btnBorrowed
+            // 
+            this.btnBorrowed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBorrowed.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBorrowed.ForeColor = System.Drawing.Color.White;
+            this.btnBorrowed.Location = new System.Drawing.Point(9, 92);
+            this.btnBorrowed.Name = "btnBorrowed";
+            this.btnBorrowed.Size = new System.Drawing.Size(184, 40);
+            this.btnBorrowed.TabIndex = 0;
+            this.btnBorrowed.Text = "Borrowed Manuals";
+            this.btnBorrowed.UseVisualStyleBackColor = true;
+            this.btnBorrowed.Click += new System.EventHandler(this.btnBorrowed_Click);
             // 
             // Search
             // 

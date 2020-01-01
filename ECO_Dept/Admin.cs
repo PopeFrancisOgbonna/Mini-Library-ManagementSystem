@@ -78,12 +78,12 @@ namespace ECO_Dept
                         string pass = "12345";
                         string query = "insert into users values(@param,@param1,@param2,@param3,@param4,@param5,@param6)";
                         SqlCommand command = new SqlCommand(query, connect);
-                        command.Parameters.AddWithValue("@param", txtService.Text);
-                        command.Parameters.AddWithValue("@param1", txtRank.Text);
-                        command.Parameters.AddWithValue("@param2", txtName.Text);
-                        command.Parameters.AddWithValue("@param3", txtPost.Text);
-                        command.Parameters.AddWithValue("@param4", txtRole.Text);
-                        command.Parameters.AddWithValue("@param5", txtName.Text);
+                        command.Parameters.AddWithValue("@param", txtService.Text.Trim());
+                        command.Parameters.AddWithValue("@param1", txtRank.Text.Trim()); 
+                        command.Parameters.AddWithValue("@param2", txtName.Text.Trim());
+                        command.Parameters.AddWithValue("@param3", txtPost.Text.Trim());
+                        command.Parameters.AddWithValue("@param4", txtRole.Text.Trim());
+                        command.Parameters.AddWithValue("@param5", txtName.Text.Trim());
                         command.Parameters.AddWithValue("@param6", pass);
 
                         connect.Open();
@@ -132,11 +132,11 @@ namespace ECO_Dept
                 using(SqlConnection connect=new SqlConnection(connectionString))
                 {
                     SqlCommand command = new SqlCommand(query, connect);
-                    command.Parameters.AddWithValue("@param", txtService.Text);
-                    command.Parameters.AddWithValue("@param1", txtRank.Text);
-                    command.Parameters.AddWithValue("@param2", txtName.Text);
-                    command.Parameters.AddWithValue("@param3", txtPost.Text);
-                    command.Parameters.AddWithValue("@param4", txtRole.Text);
+                    command.Parameters.AddWithValue("@param", txtService.Text.Trim());
+                    command.Parameters.AddWithValue("@param1", txtRank.Text.Trim());
+                    command.Parameters.AddWithValue("@param2", txtName.Text.Trim());
+                    command.Parameters.AddWithValue("@param3", txtPost.Text.Trim());
+                    command.Parameters.AddWithValue("@param4", txtRole.Text.Trim());
                     command.Parameters.AddWithValue("@param5", id);
                     try
                     {

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace ECO_Dept
 {
@@ -21,7 +22,10 @@ namespace ECO_Dept
         {
 
         }
-        public string oldpass;
+        public string oldpass;//holds old password
+        public string service;//holds service number 
+        //Database connection property
+        private string connectionString = @"Database=.;Initial Catalog=Airforce_Library;Integrated Security=true;";
         private void btnEdit_Click(object sender, EventArgs e)
         {
             btnSave.Visible = true;
@@ -49,8 +53,28 @@ namespace ECO_Dept
                     MessageBox.Show("Please Enter a new user name");
                 }
                 else
-                { 
-                MessageBox.Show("user Name Changed");
+                {
+                    using (SqlConnection connect=new SqlConnection(connectionString))
+                    {
+                        string query = "update users set UserName=@param where SVC_No=@param1";
+                        SqlCommand command = new SqlCommand(query, connect);
+                        command.Parameters.AddWithValue("@param", txtUser.Text.Trim());
+                        command.Parameters.AddWithValue("@param1", service);
+                        try
+                        {
+                            connect.Open();
+                            int i = command.ExecuteNonQuery();
+                            if (i > 0)
+                            {
+                                MessageBox.Show("Username Changed Successfully.");
+                            }
+                            connect.Close();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message.ToString());
+                        }
+                    }
                 }
             }
             else
@@ -61,7 +85,27 @@ namespace ECO_Dept
                 }
                 else
                 {
-                    MessageBox.Show("Password Changd");
+                    using (SqlConnection connect = new SqlConnection(connectionString))
+                    {
+                        string query = "update users set Password=@param where SVC_No=@param1";
+                        SqlCommand command = new SqlCommand(query, connect);
+                        command.Parameters.AddWithValue("@param", txtNewPass.Text.Trim());
+                        command.Parameters.AddWithValue("@param1", service);
+                        try
+                        {
+                            connect.Open();
+                            int i = command.ExecuteNonQuery();
+                            if (i > 0)
+                            {
+                                MessageBox.Show("Password Changed Successfully.");
+                            }
+                            connect.Close();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message.ToString());
+                        }
+                    }
                 }
             }
         }
