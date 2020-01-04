@@ -112,14 +112,28 @@ namespace ECO_Dept
 
         private void toolDatabaseBackup_Click(object sender, EventArgs e)
         {
-            DbBackup backup = new DbBackup();
-            backup.ShowDialog();
+            if (homeRole.ToLower() != "admin")
+            {
+                MessageBox.Show("You don't have Admin Right", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                DbBackup backup = new DbBackup();
+                backup.ShowDialog();
+            }
         }
 
         private void toolRestore_Click(object sender, EventArgs e)
         {
-            Restore_DB restore = new Restore_DB();
-            restore.ShowDialog();
+            if (homeRole.ToLower() != "admin")
+            {
+                MessageBox.Show("You don't have Admin Right", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                Restore_DB restore = new Restore_DB();
+                restore.ShowDialog();
+            }
         }
     }
 }
