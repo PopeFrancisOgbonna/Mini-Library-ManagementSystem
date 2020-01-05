@@ -79,7 +79,8 @@ namespace ECO_Dept
 
         private void toolReport_Click(object sender, EventArgs e)
         {
-
+            Report report = new Report();
+            report.ShowDialog();
         }
 
         private void toolAdmin_Click(object sender, EventArgs e)
