@@ -25,7 +25,7 @@ namespace ECO_Dept
         private string connectionString = @"Database=.;Initial Catalog=Airforce_Library;Integrated Security=true";
         private void lblPassword_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Please contact the Admin for a Change of Password.", "Security Alert", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
         private void txtUsername_TextChanged(object sender, EventArgs e)

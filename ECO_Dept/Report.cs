@@ -28,19 +28,21 @@ namespace ECO_Dept
             lblTo.Visible = true;
             frmDate.Visible = true;
             toDate.Visible = true;
+            btnShow.Visible = true;
         }
 
         private void btnAll_Click(object sender, EventArgs e)
         {
             using(SqlConnection connect =new SqlConnection(connectionString))
             {
-                string query = "select * from Borrow_Manual;";
+                string query = "select ID,SVC_No as 'Service No.',Rank,Name,Item_Description as 'Item Description',Qty_Out as 'Quantity Collected',Sign_Out as 'Date Collected',Qty_In as 'Quantity Returned',Qty_Bal as 'Quantity Remaining',Sign_In as 'Date Returned',Remark from Borrow_Manual;";
                 SqlCommand command = new SqlCommand(query, connect);
                 SqlDataAdapter adapt = new SqlDataAdapter(command);
                 DataTable tbl = new DataTable();
                 adapt.Fill(tbl);
                 dataGridView1.DataSource = tbl;
             }
+            btnShow.Visible = false;
             lblFrom.Visible = false;
             lblTo.Visible = false;
             frmDate.Visible = false;
@@ -91,6 +93,32 @@ namespace ECO_Dept
                     doc.Add(tbl);
                     doc.Close();
                     stream.Close();
+                    MessageBox.Show("Document Saved Successfully.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
+
+        private void btnShow_Click(object sender, EventArgs e)
+        {
+            if (frmDate.Value.Date == DateTime.Now.Date||frmDate.Value.Date>DateTime.Now.Date|| toDate.Value.Date > DateTime.Now.Date|| frmDate.Value.Date > toDate.Value.Date)
+            {
+                MessageBox.Show("Choose a Valid Date please.","Invalid Input",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+            }
+            else
+            {
+                using(SqlConnection connect=new SqlConnection(connectionString))
+                {
+                    string query = "select ID,SVC_No as 'Service No.',Rank,Name,Item_Description as 'Item Description',Qty_Out as 'Quantity Collected',Sign_Out as 'Date Collected',Qty_In as 'Quantity Returned',Qty_Bal as 'Quantity Remaining',Sign_In as 'Date Returned',Remark from Borrow_Manual where Sign_Out between @param and @param1;";
+                    SqlCommand command = new SqlCommand(query, connect);
+                    command.Parameters.AddWithValue("@param", frmDate.Value.ToShortDateString());
+                    command.Parameters.AddWithValue("@param1", toDate.Value.ToShortDateString());
+                    SqlDataAdapter adapt = new SqlDataAdapter(command);
+                    DataTable tbl = new DataTable();
+                    adapt.Fill(tbl);
+                    dataGridView1.DataSource = tbl;
+                    dataGridView1.Visible = true;
+                    btnExport.Visible = true;
+                    btnPrint.Visible = true;
                 }
             }
         }

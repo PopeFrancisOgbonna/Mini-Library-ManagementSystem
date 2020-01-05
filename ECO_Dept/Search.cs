@@ -67,7 +67,7 @@ namespace ECO_Dept
         {
             using(SqlConnection connect =new SqlConnection(connectionString))
             {
-                string query = "select * from Borrow_Manual";
+                string query = "select ID,SVC_No as 'Service No.',Rank,Name,Item_Description as 'Item Description',Qty_Out as 'Quantity Collected',Sign_Out as 'Date Collected',Qty_In as 'Quantity Returned',Qty_Bal as 'Quantity Remaining',Sign_In as 'Date Returned',Remark from Borrow_Manual;";
                 SqlCommand command = new SqlCommand(query, connect);
                 SqlDataAdapter adapt = new SqlDataAdapter(command);
                 DataTable tbl = new DataTable();
@@ -79,7 +79,7 @@ namespace ECO_Dept
         {
             using (SqlConnection connect = new SqlConnection(connectionString))
             {
-                string query = "select * from Borrow_Manual where Qty_In=0";
+                string query = "select ID,SVC_No as 'Service No.',Rank,Name,Item_Description as 'Item Description',Qty_Out as 'Quantity Collected',Sign_Out as 'Date Collected',Qty_In as 'Quantity Returned',Qty_Bal as 'Quantity Remaining',Sign_In as 'Date Returned',Remark from Borrow_Manual where Qty_In=0";
                 SqlCommand command = new SqlCommand(query, connect);
                 SqlDataAdapter adapt = new SqlDataAdapter(command);
                 DataTable tbl1 = new DataTable();
@@ -91,7 +91,7 @@ namespace ECO_Dept
         {
             using (SqlConnection connect = new SqlConnection(connectionString))
             {
-                string query = "select * from Borrow_Manual where Qty_Bal=0";
+                string query = "select ID,SVC_No as 'Service No.',Rank,Name,Item_Description as 'Item Description',Qty_Out as 'Quantity Collected',Sign_Out as 'Date Collected',Qty_In as 'Quantity Returned',Qty_Bal as 'Quantity Remaining',Sign_In as 'Date Returned',Remark from Borrow_Manual where Qty_Bal=0";
                 SqlCommand command = new SqlCommand(query, connect);
                 SqlDataAdapter adapt = new SqlDataAdapter(command);
                 DataTable tbl2 = new DataTable();
@@ -103,7 +103,7 @@ namespace ECO_Dept
         {
             using (SqlConnection connect = new SqlConnection(connectionString))
             {
-                string query = "select * from Borrow_Manual where Qty_Bal>0;";
+                string query = "select ID,SVC_No as 'Service No.',Rank,Name,Item_Description as 'Item Description',Qty_Out as 'Quantity Collected',Sign_Out as 'Date Collected',Qty_In as 'Quantity Returned',Qty_Bal as 'Quantity Remaining',Sign_In as 'Date Returned',Remark from Borrow_Manual where Qty_Bal>0;";
                 SqlCommand command = new SqlCommand(query, connect);
                 SqlDataAdapter adapt = new SqlDataAdapter(command);
                 DataTable tbl3 = new DataTable();
@@ -115,7 +115,7 @@ namespace ECO_Dept
         {
             using (SqlConnection connect = new SqlConnection(connectionString))
             {
-                string query = "select * from Borrow_Manual where lower(SVC_No)=@param";
+                string query = "select ID,SVC_No as 'Service No.',Rank,Name,Item_Description as 'Item Description',Qty_Out as 'Quantity Collected',Sign_Out as 'Date Collected',Qty_In as 'Quantity Returned',Qty_Bal as 'Quantity Remaining',Sign_In as 'Date Returned',Remark from Borrow_Manual where lower(SVC_No)=@param";
                 SqlCommand command = new SqlCommand(query, connect);
                 command.Parameters.AddWithValue("@param", txtName.Text.Trim().ToLower());
                 SqlDataAdapter adapt = new SqlDataAdapter(command);
