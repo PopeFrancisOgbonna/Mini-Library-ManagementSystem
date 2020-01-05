@@ -23,7 +23,7 @@ namespace ECO_Dept
         private void btnBackup_Click(object sender, EventArgs e)
         {
             DateTime date = DateTime.Now;
-            string day = date.Day + "_" + date.Month;
+            string day = date.Day + "_" + date.Month+"_"+date.Year;
             //create a Folder to backup our files
             string dir = @"C:\AirForce_Database";
             if (!Directory.Exists(dir)) // creates the directory if it doesn't exist
@@ -50,11 +50,6 @@ namespace ECO_Dept
                     MessageBox.Show(ex.Message.ToString());
                 }
             }
-        }
-
-        private void btnRestore_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

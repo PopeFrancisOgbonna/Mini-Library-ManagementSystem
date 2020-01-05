@@ -112,6 +112,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 63);
             this.dataGridView1.Name = "dataGridView1";
@@ -128,9 +129,10 @@
             this.btnExport.Name = "btnExport";
             this.btnExport.Size = new System.Drawing.Size(184, 43);
             this.btnExport.TabIndex = 8;
-            this.btnExport.Text = "Export as PDF";
+            this.btnExport.Text = "Save Document";
             this.btnExport.UseVisualStyleBackColor = false;
             this.btnExport.Visible = false;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
             // 
             // btnPrint
             // 

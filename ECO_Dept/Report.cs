@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.IO;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
 
 namespace ECO_Dept
 {
@@ -43,6 +46,53 @@ namespace ECO_Dept
             frmDate.Visible = false;
             toDate.Visible = false;
             dataGridView1.Visible = true;
+            btnExport.Visible = true;
+            btnPrint.Visible = true;
+        }
+
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+            saveToPDF(dataGridView1, "ECO_Record");
+        }
+        private void saveToPDF(DataGridView grd,string file)
+        {
+            BaseFont font = BaseFont.CreateFont(BaseFont.TIMES_ROMAN,BaseFont.CP1250,BaseFont.EMBEDDED);
+            PdfPTable tbl = new PdfPTable(grd.Columns.Count);
+            tbl.DefaultCell.Padding = 2;
+            tbl.WidthPercentage = 100;
+            tbl.HorizontalAlignment = Element.ALIGN_LEFT;
+            tbl.DefaultCell.BorderWidth =0.6f;
+
+            iTextSharp.text.Font text = new iTextSharp.text.Font(font, 10, iTextSharp.text.Font.NORMAL);
+            foreach (DataGridViewColumn column in grd.Columns)
+            {
+                PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText, text));
+                cell.BackgroundColor = new iTextSharp.text.BaseColor(240, 240, 240);
+                tbl.AddCell(cell);
+            }
+            //add data rows
+            foreach (DataGridViewRow row in grd.Rows)
+            {
+                foreach (DataGridViewCell cell in row.Cells)
+                {
+                    tbl.AddCell(new Phrase(cell.Value.ToString(), text));
+                }
+            }
+            var savefiles = new SaveFileDialog();
+            savefiles.FileName = file;
+            savefiles.DefaultExt = ".pdf";
+            if (savefiles.ShowDialog() == DialogResult.OK)
+            {
+                using(FileStream stream =new FileStream(savefiles.FileName, FileMode.Create))
+                {
+                    Document doc = new Document(PageSize.A4, 10f, 10f, 10f, 0f);
+                    PdfWriter.GetInstance(doc, stream);
+                    doc.Open();
+                    doc.Add(tbl);
+                    doc.Close();
+                    stream.Close();
+                }
+            }
         }
     }
 }
