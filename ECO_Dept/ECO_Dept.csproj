@@ -74,6 +74,7 @@
     <Compile Include="DbBackup.Designer.cs">
       <DependentUpon>DbBackup.cs</DependentUpon>
     </Compile>
+    <Compile Include="DGVPrinter.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

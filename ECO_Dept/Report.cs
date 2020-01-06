@@ -11,6 +11,7 @@ using System.Data.SqlClient;
 using System.IO;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
+using DGVPrinterHelper;
 
 namespace ECO_Dept
 {
@@ -122,5 +123,22 @@ namespace ECO_Dept
                 }
             }
         }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            DGVPrinter print = new DGVPrinter();
+            print.Title = "RESTRICTED";
+            print.SubTitle = string.Format("ECO Training Manual Library Report\nDate:{0}", DateTime.Now.Date.ToString());
+            print.SubTitleFormatFlags = StringFormatFlags.LineLimit | StringFormatFlags.NoClip;
+            print.PageNumbers = true;
+            print.PageNumberInHeader = false;
+            print.PorportionalColumns = true;
+            print.HeaderCellAlignment = StringAlignment.Near;
+            print.Footer = "RESTRICTED";
+            print.FooterSpacing = 12;
+            print.PrintDataGridView(dataGridView1);
+            
+        }
+        
     }
 }

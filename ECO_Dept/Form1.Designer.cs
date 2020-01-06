@@ -430,6 +430,7 @@
             this.MinimumSize = new System.Drawing.Size(1260, 676);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.homePane.ResumeLayout(false);

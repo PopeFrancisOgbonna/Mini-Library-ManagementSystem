@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.IO;
 
 namespace ECO_Dept
 {
@@ -22,7 +23,7 @@ namespace ECO_Dept
         public static string role;
         public static string name;
         //Database properties
-        private string connectionString = @"Database=.;Initial Catalog=Airforce_Library;Integrated Security=true";
+        private string connectionString = @"Data Source=.;Initial Catalog=Airforce_Library;Integrated Security=true";
         private void lblPassword_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Please contact the Admin for a Change of Password.", "Security Alert", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -124,6 +125,68 @@ namespace ECO_Dept
             loginPane.Visible = false;
             btnSignin.Visible = false;
             btnCancel.Visible = false;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            if (!checkDatabaseExist())
+            {
+                generateDB();
+            }
+        }
+        private bool checkDatabaseExist()
+        {
+            //check if the database exist
+            SqlConnection connect = new SqlConnection(@"Data Source=.;Initial Catalog=Airforce_Library;Integrated Security=true;");
+            try
+            {
+                connect.Open();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+        private void generateDB()
+        {
+            List<string> cmds = new List<string>();
+            //Read script file from application
+            if(File.Exists(Application.StartupPath+ "\\airforce_eco_db.sql"))
+            {
+                TextReader readText = new StreamReader(Application.StartupPath + "\\airforce_eco_db.sql");
+                string line = "";
+                string cmd = "";
+                while ((line = readText.ReadLine()) != null)
+                {
+                    if (line.Trim().ToUpper() == "GO")
+                    {
+                        cmds.Add(cmd);
+                        cmd = "";
+                    }else
+                    {
+                        cmd += "\r\n";
+                    }
+                }
+                if (cmd.Length > 0)
+                {
+                    cmds.Add(cmd);
+                    cmd = "";
+                }
+                readText.Close();
+            }
+            if (cmds.Count > 0)
+            {
+                SqlCommand command = new SqlCommand();
+                command.Connection = new SqlConnection(@"Data Source=.;Initial Catalog=MASTER;Integrated Security=true");
+                command.CommandType = System.Data.CommandType.Text;
+                command.Connection.Open();
+                for (int i = 0; i < cmds.Count; i++)
+                {
+                    command.CommandText = cmds[i];
+                    command.ExecuteNonQuery();
+                }
+            }
         }
     }
 }
