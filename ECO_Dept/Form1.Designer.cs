@@ -58,6 +58,8 @@
             this.lbltime = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.btnCancel = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.homePane.SuspendLayout();
@@ -76,18 +78,18 @@
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel1.Controls.Add(this.pictureBox4);
-            this.panel1.Location = new System.Drawing.Point(12, 23);
+            this.panel1.Location = new System.Drawing.Point(15, 26);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(378, 473);
+            this.panel1.Size = new System.Drawing.Size(423, 518);
             this.panel1.TabIndex = 0;
             // 
             // pictureBox4
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.White;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(8, 12);
+            this.pictureBox4.Location = new System.Drawing.Point(7, 8);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(362, 450);
+            this.pictureBox4.Size = new System.Drawing.Size(408, 499);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 0;
             this.pictureBox4.TabStop = false;
@@ -135,7 +137,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Modern No. 20", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Blue;
-            this.label7.Location = new System.Drawing.Point(-9, 31);
+            this.label7.Location = new System.Drawing.Point(0, 31);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(799, 54);
             this.label7.TabIndex = 0;
@@ -384,12 +386,36 @@
             this.btnCancel.Visible = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("VAGRounded BT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label5.Location = new System.Drawing.Point(86, 559);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(262, 23);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "HQ 131 Engineering Group";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("VAGRounded BT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label6.Location = new System.Drawing.Point(68, 588);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(315, 23);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Nigerian Airforce Base Makurdi";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(1244, 637);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.homePane);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.lbltime);
@@ -454,6 +480,8 @@
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtServiceNo;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }
 
