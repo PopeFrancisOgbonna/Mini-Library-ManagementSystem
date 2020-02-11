@@ -25,7 +25,7 @@ namespace ECO_Dept
         public string oldpass;//holds old password
         public string service;//holds service number 
         //Database connection property
-        private string connectionString = @"Database=.;Initial Catalog=Airforce_Library;Integrated Security=true;";
+        private string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Airforce_Library.mdf;Integrated Security=True;Connect Timeout=30;";
         private void btnEdit_Click(object sender, EventArgs e)
         {
             btnSave.Visible = true;

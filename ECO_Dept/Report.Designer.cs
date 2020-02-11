@@ -134,6 +134,7 @@
             // btnPrint
             // 
             this.btnPrint.BackColor = System.Drawing.Color.DarkCyan;
+            this.btnPrint.Enabled = false;
             this.btnPrint.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrint.ForeColor = System.Drawing.Color.White;
             this.btnPrint.Location = new System.Drawing.Point(937, 450);
@@ -185,6 +186,7 @@
             this.dataGridView1.Size = new System.Drawing.Size(1104, 381);
             this.dataGridView1.TabIndex = 7;
             this.dataGridView1.Visible = false;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // btnShow
             // 

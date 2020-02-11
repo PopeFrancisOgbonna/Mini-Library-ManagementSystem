@@ -18,7 +18,7 @@ namespace ECO_Dept
             InitializeComponent();
         }
         //Database connection property
-        private string connectionString = @"Data Source=.;Initial Catalog=Airforce_Library;Integrated Security=true;";
+        private string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Airforce_Library.mdf;Integrated Security=True;Connect Timeout=30;";
         private void btnPersonnel_Click(object sender, EventArgs e)
         {
             label2.Visible = true;

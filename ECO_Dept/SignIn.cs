@@ -22,7 +22,7 @@ namespace ECO_Dept
             txtID.Visible = true;
         }
         //Database connection properties
-        private string connectionString = @"Data Source=.;Initial Catalog=Airforce_Library;Integrated Security=true;";
+        private string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Airforce_Library.mdf;Integrated Security=True;Connect Timeout=30;";
         private void txtService_TextChanged(object sender, EventArgs e)
         {
            

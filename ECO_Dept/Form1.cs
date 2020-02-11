@@ -23,7 +23,7 @@ namespace ECO_Dept
         public static string role;
         public static string name;
         //Database properties
-        private string connectionString = @"Data Source=.;Initial Catalog=Airforce_Library;Integrated Security=true";
+        private string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Airforce_Library.mdf;Integrated Security=True;Connect Timeout=30;";
         private void lblPassword_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Please contact the Admin for a Change of Password.", "Security Alert", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -129,15 +129,15 @@ namespace ECO_Dept
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            if (!checkDatabaseExist())
-            {
-                generateDB();
-            }
+            //if (!checkDatabaseExist())
+            //{
+            //    generateDB();
+            //}
         }
         private bool checkDatabaseExist()
         {
             //check if the database exist
-            SqlConnection connect = new SqlConnection(@"Data Source=.;Initial Catalog=Airforce_Library;Integrated Security=true;");
+            SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Airforce_Library.mdf;Integrated Security=True;Connect Timeout=30;");
             try
             {
                 connect.Open();
@@ -178,7 +178,7 @@ namespace ECO_Dept
             if (cmds.Count > 0)
             {
                 SqlCommand command = new SqlCommand();
-                command.Connection = new SqlConnection(@"Data Source=.;Initial Catalog=MASTER;Integrated Security=true");
+                command.Connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Airforce_Library.mdf;Integrated Security=True;Connect Timeout=30;");
                 command.CommandType = System.Data.CommandType.Text;
                 command.Connection.Open();
                 for (int i = 0; i < cmds.Count; i++)

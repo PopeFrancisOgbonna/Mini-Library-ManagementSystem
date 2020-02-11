@@ -20,7 +20,7 @@ namespace ECO_Dept
             dataGridView1.Visible = true;
         }
         //Database connection property
-        private string connectionString = @"Database=.;Initial Catalog=Airforce_Library;Integrated Security=true;";
+        private string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Airforce_Library.mdf;Integrated Security=True;Connect Timeout=30";
         private void txtService_TextChanged(object sender, EventArgs e)
         {
             if (txtService.Text != "")

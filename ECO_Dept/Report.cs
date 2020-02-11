@@ -22,7 +22,7 @@ namespace ECO_Dept
             InitializeComponent();
         }
         //Database connection property
-        private string connectionString = @"Data Source=.;Initial Catalog=Airforce_Library;Integrated Security=true;";
+        private string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Airforce_Library.mdf;Integrated Security=True;Connect Timeout=30";
         private void btnSpecific_Click(object sender, EventArgs e)
         {
             lblFrom.Visible = true;
@@ -139,6 +139,10 @@ namespace ECO_Dept
             print.PrintDataGridView(dataGridView1);
             
         }
-        
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -19,7 +19,7 @@ namespace ECO_Dept
             InitializeComponent();
         }
         //Database property
-        string connectionString = @"Data Source=.;Initial Catalog=Airforce_Library;Integrated Security=true;";
+        string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Airforce_Library.mdf;Integrated Security=True;Connect Timeout=30;";
         private void btnRestore_Click(object sender, EventArgs e)
         {
             string database = "Airforce_Library";

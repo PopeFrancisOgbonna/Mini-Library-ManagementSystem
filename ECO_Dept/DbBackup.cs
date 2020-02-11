@@ -19,7 +19,7 @@ namespace ECO_Dept
             InitializeComponent();
         }
         //Database connection property
-        private string connectionString = @"Data Source=.;Initial Catalog=Airforce_Library;Integrated Security=true;";
+        private string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Airforce_Library.mdf;Integrated Security=True;Connect Timeout=30;";
         private void btnBackup_Click(object sender, EventArgs e)
         {
             DateTime date = DateTime.Now;
@@ -31,17 +31,17 @@ namespace ECO_Dept
                 Directory.CreateDirectory(dir);
             }
             //Database
-            string Db = "Airforce_Library";
+           // string Db = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Airforce_Library.mdf");//"Airforce_Library.mdf";
+
             using (SqlConnection connect = new SqlConnection(connectionString))
             {
                 try
                 {
-                    string str = "USE " + Db + ";";
-                    string query = "BACKUP DATABASE " + Db + " TO DISK='C:\\AirForce_Database\\" + Db + "_" + day + ".Bak' WITH FORMAT,MEDIANAME='Z_SQLServerBackups of" + Db + "';";
-                    SqlCommand command = new SqlCommand(str, connect);
-                    SqlCommand command1 = new SqlCommand(query, connect);
+                    // string str = "USE " + Db + ";";
+                    string query = "BACKUP DATABASE [" +Application.StartupPath + "\\Airforce_Library.mdf] TO DISK='C:\\AirForce_Database\\AirForceLibrary_" + day + ".Bak';";
+                  SqlCommand command1 = new SqlCommand(query, connect);
                     connect.Open();
-                    command.ExecuteNonQuery();
+                   // command.ExecuteNonQuery();
                     command1.ExecuteNonQuery();
                     MessageBox.Show("Backup completed Successfully","Database Backup",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 }

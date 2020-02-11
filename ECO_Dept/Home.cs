@@ -132,8 +132,9 @@ namespace ECO_Dept
             }
             else
             {
-                Restore_DB restore = new Restore_DB();
-                restore.ShowDialog();
+                MessageBox.Show("To avoid Data loss please contact the IT Personnel", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //Restore_DB restore = new Restore_DB();
+                //restore.ShowDialog();
             }
         }
     }

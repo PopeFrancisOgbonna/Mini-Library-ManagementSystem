@@ -139,9 +139,9 @@
             this.label7.ForeColor = System.Drawing.Color.Blue;
             this.label7.Location = new System.Drawing.Point(-9, 31);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(810, 54);
+            this.label7.Size = new System.Drawing.Size(799, 54);
             this.label7.TabIndex = 0;
-            this.label7.Text = "Aircraft Tranning Manual Library";
+            this.label7.Text = "Aircraft Training Manual Library";
             // 
             // loginPane
             // 

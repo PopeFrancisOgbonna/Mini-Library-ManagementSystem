@@ -19,7 +19,7 @@ namespace ECO_Dept
         }
         int count; //for switching the edit user role modules
         //Database connection properties
-        private string connectionString = @"Database=.;Initial catalog=AirForce_Library;Integrated Security =true";
+        private string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Airforce_Library.mdf;Integrated Security=True;Connect Timeout=30";
         private void lblEdit_Click(object sender, EventArgs e)
         {
            
