@@ -15,25 +15,7 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_091DD1B0AA87487CA1E28860F0CD2FB1"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_0CD4DC7F2279352C5149A4100B055E7C"
-        "OwnerKey" = "8:_C500512553E249B4B33D9B07E08734DF"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_547911FAC6D126474CB408936AC79587"
-        "OwnerKey" = "8:_81CC1F3F5276408FBFF9BC66B7F3E846"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_547911FAC6D126474CB408936AC79587"
+        "MsmKey" = "8:_11CE635593637B4F24A08FD3C31343A4"
         "OwnerKey" = "8:_C500512553E249B4B33D9B07E08734DF"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -45,7 +27,19 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_81CC1F3F5276408FBFF9BC66B7F3E846"
+        "MsmKey" = "8:_65A5662E21224FF5B309BB2CA8E9A3DC"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_AAFBA82778BB1DEA10FC392E8D9687DC"
+        "OwnerKey" = "8:_FE8F86A43A45B68C3C758BDF0FB03C96"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_AAFBA82778BB1DEA10FC392E8D9687DC"
         "OwnerKey" = "8:_C500512553E249B4B33D9B07E08734DF"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -69,7 +63,13 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_E7D2EA655081036823EAF68712526687"
+        "MsmKey" = "8:_F7B9E1EC89936EFB2B9C4DD4DE6824A4"
+        "OwnerKey" = "8:_C500512553E249B4B33D9B07E08734DF"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_FE8F86A43A45B68C3C758BDF0FB03C96"
         "OwnerKey" = "8:_C500512553E249B4B33D9B07E08734DF"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -82,25 +82,25 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_E7D2EA655081036823EAF68712526687"
+        "OwnerKey" = "8:_F7B9E1EC89936EFB2B9C4DD4DE6824A4"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_0CD4DC7F2279352C5149A4100B055E7C"
+        "OwnerKey" = "8:_11CE635593637B4F24A08FD3C31343A4"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_81CC1F3F5276408FBFF9BC66B7F3E846"
+        "OwnerKey" = "8:_FE8F86A43A45B68C3C758BDF0FB03C96"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_547911FAC6D126474CB408936AC79587"
+        "OwnerKey" = "8:_AAFBA82778BB1DEA10FC392E8D9687DC"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -209,71 +209,20 @@
         }
         "File"
         {
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_091DD1B0AA87487CA1E28860F0CD2FB1"
-            {
-            "SourcePath" = "8:..\\..\\..\\..\\..\\Desktop\\My Folder\\Images\\Ico files\\icons8_user.ico"
-            "TargetName" = "8:icons8_user.ico"
-            "Tag" = "8:"
-            "Folder" = "8:_E63A3EC28133498299CD3433603C3EBF"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_0CD4DC7F2279352C5149A4100B055E7C"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_11CE635593637B4F24A08FD3C31343A4"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:itextsharp, Version=5.5.13.1, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_0CD4DC7F2279352C5149A4100B055E7C"
+                    "_11CE635593637B4F24A08FD3C31343A4"
                     {
                     "Name" = "8:itextsharp.dll"
                     "Attributes" = "3:512"
                     }
                 }
             "SourcePath" = "8:itextsharp.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_3C12866B17084C37A2B5B5C5BC56E6C5"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_547911FAC6D126474CB408936AC79587"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Common.Logging.Core, Version=3.4.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_547911FAC6D126474CB408936AC79587"
-                    {
-                    "Name" = "8:Common.Logging.Core.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:Common.Logging.Core.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_3C12866B17084C37A2B5B5C5BC56E6C5"
@@ -311,20 +260,40 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_81CC1F3F5276408FBFF9BC66B7F3E846"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_65A5662E21224FF5B309BB2CA8E9A3DC"
+            {
+            "SourcePath" = "8:..\\..\\My Folder\\Images\\Ico files\\131_logo.ico"
+            "TargetName" = "8:131_logo.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_E63A3EC28133498299CD3433603C3EBF"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_AAFBA82778BB1DEA10FC392E8D9687DC"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Common.Logging, Version=3.4.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:Common.Logging.Core, Version=3.4.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_81CC1F3F5276408FBFF9BC66B7F3E846"
+                    "_AAFBA82778BB1DEA10FC392E8D9687DC"
                     {
-                    "Name" = "8:Common.Logging.dll"
+                    "Name" = "8:Common.Logging.Core.dll"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:Common.Logging.dll"
+            "SourcePath" = "8:Common.Logging.Core.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_3C12866B17084C37A2B5B5C5BC56E6C5"
@@ -393,20 +362,51 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_E7D2EA655081036823EAF68712526687"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_F7B9E1EC89936EFB2B9C4DD4DE6824A4"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:BouncyCastle.Crypto, Version=1.8.5.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_E7D2EA655081036823EAF68712526687"
+                    "_F7B9E1EC89936EFB2B9C4DD4DE6824A4"
                     {
                     "Name" = "8:BouncyCastle.Crypto.dll"
                     "Attributes" = "3:512"
                     }
                 }
             "SourcePath" = "8:BouncyCastle.Crypto.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_3C12866B17084C37A2B5B5C5BC56E6C5"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_FE8F86A43A45B68C3C758BDF0FB03C96"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Common.Logging, Version=3.4.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_FE8F86A43A45B68C3C758BDF0FB03C96"
+                    {
+                    "Name" = "8:Common.Logging.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Common.Logging.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_3C12866B17084C37A2B5B5C5BC56E6C5"
@@ -623,7 +623,21 @@
             "Target" = "8:_C500512553E249B4B33D9B07E08734DF"
             "Folder" = "8:_2D083CAAB72045BDB0F5C33DF2D52153"
             "WorkingFolder" = "8:_3C12866B17084C37A2B5B5C5BC56E6C5"
-            "Icon" = "8:_091DD1B0AA87487CA1E28860F0CD2FB1"
+            "Icon" = "8:_65A5662E21224FF5B309BB2CA8E9A3DC"
+            "Feature" = "8:"
+            }
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_CA788A505C1B417AB117DE5FA3217CD3"
+            {
+            "Name" = "8:ECO Library"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_C500512553E249B4B33D9B07E08734DF"
+            "Folder" = "8:_C9F17C3E4DAA4DFD8AEC117767B307FF"
+            "WorkingFolder" = "8:_3C12866B17084C37A2B5B5C5BC56E6C5"
+            "Icon" = "8:_65A5662E21224FF5B309BB2CA8E9A3DC"
             "Feature" = "8:"
             }
         }
@@ -1027,7 +1041,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_C500512553E249B4B33D9B07E08734DF"
             {
-            "SourcePath" = "8:..\\ECO_Dept\\obj\\Debug\\ECO_Dept.exe"
+            "SourcePath" = "8:..\\ECO_Dept_2\\obj\\Debug\\ECO_Dept.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_3C12866B17084C37A2B5B5C5BC56E6C5"
