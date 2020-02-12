@@ -142,7 +142,7 @@
             this.dateTimePicker1.Location = new System.Drawing.Point(324, 226);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(149, 28);
-            this.dateTimePicker1.TabIndex = 11;
+            this.dateTimePicker1.TabIndex = 5;
             // 
             // label6
             // 
@@ -159,7 +159,7 @@
             this.txtRank.Location = new System.Drawing.Point(178, 71);
             this.txtRank.Name = "txtRank";
             this.txtRank.Size = new System.Drawing.Size(295, 30);
-            this.txtRank.TabIndex = 9;
+            this.txtRank.TabIndex = 1;
             // 
             // txtQuantity
             // 
@@ -167,7 +167,7 @@
             this.txtQuantity.Location = new System.Drawing.Point(178, 226);
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.Size = new System.Drawing.Size(93, 30);
-            this.txtQuantity.TabIndex = 8;
+            this.txtQuantity.TabIndex = 4;
             this.txtQuantity.TextChanged += new System.EventHandler(this.txtQuantity_TextChanged);
             // 
             // txtItem
@@ -177,7 +177,7 @@
             this.txtItem.Multiline = true;
             this.txtItem.Name = "txtItem";
             this.txtItem.Size = new System.Drawing.Size(295, 81);
-            this.txtItem.TabIndex = 7;
+            this.txtItem.TabIndex = 3;
             // 
             // txtName
             // 
@@ -185,7 +185,7 @@
             this.txtName.Location = new System.Drawing.Point(178, 105);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(295, 30);
-            this.txtName.TabIndex = 6;
+            this.txtName.TabIndex = 2;
             // 
             // txtService
             // 
@@ -193,7 +193,7 @@
             this.txtService.Location = new System.Drawing.Point(178, 37);
             this.txtService.Name = "txtService";
             this.txtService.Size = new System.Drawing.Size(295, 30);
-            this.txtService.TabIndex = 5;
+            this.txtService.TabIndex = 0;
             this.txtService.TextChanged += new System.EventHandler(this.txtService_TextChanged);
             // 
             // label5

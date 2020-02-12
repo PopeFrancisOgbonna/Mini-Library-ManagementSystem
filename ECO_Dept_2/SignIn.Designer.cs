@@ -37,6 +37,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.txtRemark = new System.Windows.Forms.TextBox();
             this.txtRemain = new System.Windows.Forms.TextBox();
@@ -58,7 +59,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnReturned = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -169,6 +169,19 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Personnel Detail";
             // 
+            // btnAdd
+            // 
+            this.btnAdd.BackColor = System.Drawing.Color.BlueViolet;
+            this.btnAdd.Font = new System.Drawing.Font("News706 BT", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.Location = new System.Drawing.Point(12, 346);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(79, 36);
+            this.btnAdd.TabIndex = 7;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Visible = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -185,7 +198,7 @@
             this.txtRemark.Multiline = true;
             this.txtRemark.Name = "txtRemark";
             this.txtRemark.Size = new System.Drawing.Size(295, 75);
-            this.txtRemark.TabIndex = 20;
+            this.txtRemark.TabIndex = 7;
             this.txtRemark.TextChanged += new System.EventHandler(this.txtRemark_TextChanged);
             // 
             // txtRemain
@@ -194,7 +207,7 @@
             this.txtRemain.Location = new System.Drawing.Point(178, 213);
             this.txtRemain.Name = "txtRemain";
             this.txtRemain.Size = new System.Drawing.Size(93, 30);
-            this.txtRemain.TabIndex = 19;
+            this.txtRemain.TabIndex = 5;
             // 
             // label8
             // 
@@ -211,7 +224,7 @@
             this.txtReturned.Location = new System.Drawing.Point(380, 174);
             this.txtReturned.Name = "txtReturned";
             this.txtReturned.Size = new System.Drawing.Size(93, 30);
-            this.txtReturned.TabIndex = 17;
+            this.txtReturned.TabIndex = 4;
             this.txtReturned.TextChanged += new System.EventHandler(this.txtReturned_TextChanged);
             // 
             // label3
@@ -280,7 +293,7 @@
             this.dateTimePicker1.Location = new System.Drawing.Point(324, 210);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(149, 28);
-            this.dateTimePicker1.TabIndex = 11;
+            this.dateTimePicker1.TabIndex = 6;
             // 
             // label6
             // 
@@ -298,7 +311,7 @@
             this.txtQuantityIn.Location = new System.Drawing.Point(178, 174);
             this.txtQuantityIn.Name = "txtQuantityIn";
             this.txtQuantityIn.Size = new System.Drawing.Size(93, 30);
-            this.txtQuantityIn.TabIndex = 8;
+            this.txtQuantityIn.TabIndex = 3;
             // 
             // txtItemIn
             // 
@@ -308,7 +321,7 @@
             this.txtItemIn.Multiline = true;
             this.txtItemIn.Name = "txtItemIn";
             this.txtItemIn.Size = new System.Drawing.Size(295, 70);
-            this.txtItemIn.TabIndex = 7;
+            this.txtItemIn.TabIndex = 2;
             // 
             // txtNameIn
             // 
@@ -317,7 +330,7 @@
             this.txtNameIn.Location = new System.Drawing.Point(178, 62);
             this.txtNameIn.Name = "txtNameIn";
             this.txtNameIn.Size = new System.Drawing.Size(295, 30);
-            this.txtNameIn.TabIndex = 6;
+            this.txtNameIn.TabIndex = 1;
             // 
             // txtServiceIn
             // 
@@ -326,7 +339,7 @@
             this.txtServiceIn.Location = new System.Drawing.Point(178, 26);
             this.txtServiceIn.Name = "txtServiceIn";
             this.txtServiceIn.Size = new System.Drawing.Size(295, 30);
-            this.txtServiceIn.TabIndex = 5;
+            this.txtServiceIn.TabIndex = 0;
             this.txtServiceIn.TextChanged += new System.EventHandler(this.txtService_TextChanged);
             // 
             // label5
@@ -377,19 +390,6 @@
             this.btnReturned.Text = "Returned Items";
             this.btnReturned.UseVisualStyleBackColor = false;
             this.btnReturned.Click += new System.EventHandler(this.btnReturned_Click);
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.BackColor = System.Drawing.Color.BlueViolet;
-            this.btnAdd.Font = new System.Drawing.Font("News706 BT", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(12, 346);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(79, 36);
-            this.btnAdd.TabIndex = 7;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = false;
-            this.btnAdd.Visible = false;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // SignIn
             // 

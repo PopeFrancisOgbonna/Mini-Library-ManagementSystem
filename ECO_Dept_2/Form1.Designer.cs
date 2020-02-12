@@ -192,7 +192,7 @@
             this.txtServiceNo.Multiline = true;
             this.txtServiceNo.Name = "txtServiceNo";
             this.txtServiceNo.Size = new System.Drawing.Size(172, 48);
-            this.txtServiceNo.TabIndex = 10;
+            this.txtServiceNo.TabIndex = 1;
             // 
             // lblPassword
             // 
@@ -239,7 +239,7 @@
             this.txtUserpost.Multiline = true;
             this.txtUserpost.Name = "txtUserpost";
             this.txtUserpost.Size = new System.Drawing.Size(443, 48);
-            this.txtUserpost.TabIndex = 5;
+            this.txtUserpost.TabIndex = 3;
             this.txtUserpost.TextChanged += new System.EventHandler(this.txtUserpost_TextChanged);
             // 
             // txtUserpass
@@ -250,7 +250,7 @@
             this.txtUserpass.Name = "txtUserpass";
             this.txtUserpass.PasswordChar = '*';
             this.txtUserpass.Size = new System.Drawing.Size(443, 48);
-            this.txtUserpass.TabIndex = 4;
+            this.txtUserpass.TabIndex = 2;
             this.txtUserpass.TextChanged += new System.EventHandler(this.txtUserpass_TextChanged);
             // 
             // txtUsername
@@ -260,7 +260,7 @@
             this.txtUsername.Multiline = true;
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(265, 48);
-            this.txtUsername.TabIndex = 3;
+            this.txtUsername.TabIndex = 0;
             this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
             // 
             // pictureBox7
@@ -414,18 +414,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(1244, 637);
+            this.Controls.Add(this.loginPane);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.homePane);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.lbltime);
             this.Controls.Add(this.lbldate);
             this.Controls.Add(this.btnSignin);
-            this.Controls.Add(this.loginPane);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.homePane);
             this.MaximumSize = new System.Drawing.Size(1260, 676);
             this.MinimumSize = new System.Drawing.Size(1260, 676);
             this.Name = "Form1";

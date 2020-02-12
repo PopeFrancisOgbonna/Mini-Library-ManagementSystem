@@ -22,7 +22,7 @@ namespace ECO_Dept
         string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Airforce_Library.mdf;Integrated Security=True;Connect Timeout=30;";
         private void btnRestore_Click(object sender, EventArgs e)
         {
-            string database = "Airforce_Library";
+            string database =@"[" + Application.StartupPath + "\\Airforce_Library.mdf]";
             if (txtFile.Text == "")
             {
                 MessageBox.Show("Please choose a Backup File", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -52,7 +52,7 @@ namespace ECO_Dept
                         //The code below restores the Database to multi user mode 
                         command.ExecuteNonQuery();
                         command3.ExecuteNonQuery();
-                        MessageBox.Show("Database Restored Successfull, Please Reload Application", "Data Restored", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Database Restored Successfull, Please Restart the Application", "Data Restored", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     catch (Exception ex)
                     {

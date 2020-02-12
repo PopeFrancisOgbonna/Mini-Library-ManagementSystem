@@ -172,7 +172,7 @@
             this.txtRank.Location = new System.Drawing.Point(120, 77);
             this.txtRank.Name = "txtRank";
             this.txtRank.Size = new System.Drawing.Size(272, 30);
-            this.txtRank.TabIndex = 9;
+            this.txtRank.TabIndex = 1;
             // 
             // txtRole
             // 
@@ -180,7 +180,7 @@
             this.txtRole.Location = new System.Drawing.Point(120, 200);
             this.txtRole.Name = "txtRole";
             this.txtRole.Size = new System.Drawing.Size(272, 30);
-            this.txtRole.TabIndex = 8;
+            this.txtRole.TabIndex = 4;
             this.txtRole.TextChanged += new System.EventHandler(this.txtRole_TextChanged);
             // 
             // txtPost
@@ -189,7 +189,7 @@
             this.txtPost.Location = new System.Drawing.Point(120, 159);
             this.txtPost.Name = "txtPost";
             this.txtPost.Size = new System.Drawing.Size(272, 30);
-            this.txtPost.TabIndex = 7;
+            this.txtPost.TabIndex = 3;
             // 
             // txtName
             // 
@@ -197,7 +197,7 @@
             this.txtName.Location = new System.Drawing.Point(120, 118);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(272, 30);
-            this.txtName.TabIndex = 6;
+            this.txtName.TabIndex = 2;
             // 
             // txtService
             // 
@@ -205,7 +205,7 @@
             this.txtService.Location = new System.Drawing.Point(120, 36);
             this.txtService.Name = "txtService";
             this.txtService.Size = new System.Drawing.Size(272, 30);
-            this.txtService.TabIndex = 5;
+            this.txtService.TabIndex = 0;
             this.txtService.TextChanged += new System.EventHandler(this.txtService_TextChanged);
             // 
             // label5
